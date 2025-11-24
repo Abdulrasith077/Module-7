@@ -15,22 +15,21 @@ To write a Python program to calculate the **sum of all digits** in a number usi
 6. **Stop**
 
 ## 💻 PROGRAM:
-```
-def sum_digit(n):
-    # Base Case
-    if n <= 0:
+~~~
+def sum_digit(num):
+    if num < 0 or int(num) != num:
         return 0
-    # Recursive Case
-    return (n % 10) + sum_digit(n // 10)
+    elif num == 0:
+        return 0
+    else:
+        return (num % 10) + sum_digit(num//10)
+num= int(input())
+print(sum_digit(num))
+~~~
 
-num = int(input("Enter a positive integer: "))
-result = sum_digit(num)
-print(f"Sum of digits of {num} is: {result}")
-```
 ## OUTPUT
-```
-Enter a positive integer: 1234
-Sum of digits of 1234 is: 10
-````
+<img width="467" height="220" alt="Screenshot 2025-09-08 085403" src="https://github.com/user-attachments/assets/6966fc70-cf5d-4722-8f75-20cf7a6682cb" />
+
+
 ## RESULT
-Hence calculated the **sum of all digits** in a number using **recursion**
+Thus the output is verified.
